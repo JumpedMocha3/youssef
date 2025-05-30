@@ -31,7 +31,7 @@
             z-index: 10;
         }
         
-        /* Your Uiverse.io button styles - enhanced */
+        /* Button styles */
         .button {
             --black-700: hsla(0 0% 12% / 1);
             --border_radius: 9999px;
@@ -203,7 +203,7 @@
             letter-spacing: 0.5px;
         }
         
-        /* Fullscreen text display */
+        /* Fullscreen text display - NOW IN RED */
         #fullscreenText {
             position: fixed;
             top: 0;
@@ -222,11 +222,12 @@
             z-index: 5;
             text-transform: uppercase;
             letter-spacing: 0.5vw;
+            color: #ff0000; /* RED COLOR */
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red glow effect */
         }
         
         #fullscreenText.active {
             opacity: 1;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
         
         /* Floating particles background */
@@ -260,7 +261,6 @@
     <div class="particles" id="particles"></div>
     
     <div class="container">
-        <!-- Your exact button HTML -->
         <button class="button" id="actionButton">
             <div class="dots_border"></div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
@@ -296,9 +296,9 @@
             this.style.opacity = '0';
             this.style.pointerEvents = 'none';
             
-            // Show fullscreen text
+            // Show fullscreen text (now in red)
             fullscreenText.classList.add('active');
-            fullscreenText.textContent = "كس امك يا كلب"; // Change text here
+            fullscreenText.textContent = "سك امك يا كلب"; // Change text here
             
             // Optional: Add a subtle background effect
             document.body.style.background = "linear-gradient(135deg, #000000, #1a1a2e)";
