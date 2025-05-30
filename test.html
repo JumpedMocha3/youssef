@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Interaction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            transition: background 0.5s;
+        }
+        #actionButton {
+            padding: 20px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #actionButton:hover {
+            background-color: #45a049;
+        }
+        #fullscreenText {
+            display: none;
+            font-size: 72px;
+            text-align: center;
+            color: #ff0000;
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <button id="actionButton">دوس هنا</button>
+    <div id="fullscreenText"></div>
+
+    <script>
+        const button = document.getElementById('actionButton');
+        const fullscreenText = document.getElementById('fullscreenText');
+        
+        button.addEventListener('click', function() {
+            // Hide the button
+            this.style.display = 'none';
+            
+            // Show custom fullscreen text
+            fullscreenText.style.display = 'block';
+            fullscreenText.textContent = "كس امك يا كلب"; // Change this text
+            
+            // Optional: Change background color
+            document.body.style.background = "#111";
+        });
+    </script>
+</body>
+</html>
